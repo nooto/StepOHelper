@@ -1,0 +1,36 @@
+
+
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+def commonkit
+    pod 'StepOHelper', :path => '../../StepOHelper'
+
+end
+
+target 'StepOHelperDemo' do
+    commonkit
+end
+
+
+#post_install do |installer_representation|
+#    installer_representation.pods_project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            if config.name.downcase == 'debug' && target.name == 'SmartHome'
+#                config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+#                config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'NS_BLOCK_ASSERTIONS'
+#            end
+#            
+#            if target.name == 'RNPod'
+#                config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+#                config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'SMARTVILLAGE'
+#            end
+#        end
+#    end
+#end
+
+
+#### 解决依赖库有静态库pod install时引起的错误
+#### target has transitive dependencies that include static binaries
+#pre_install do |installer| Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+#end
