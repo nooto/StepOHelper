@@ -56,10 +56,8 @@ TODO: Add long description of the pod here.
   #  profile URL.
   #
 
-  spec.author             = { " 高昂" => "gaoang@evergrande.cn" }
-  # Or just: spec.author    = " 高昂"
-  # spec.authors            = { " 高昂" => "gaoang@evergrande.cn" }
-  # spec.social_media_url   = "https://twitter.com/ 高昂"
+  spec.author             = { " StepO" => "gaogao323@126.com" }
+  # spec.social_media_url   = "https://twitter.com/"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -69,6 +67,8 @@ TODO: Add long description of the pod here.
 
 #   spec.platform     = :ios
    spec.platform     = :ios, "9.0"
+   
+   spec.ios.deployment_target = '9.0'
 
   #  When using multiple platforms
 #   spec.ios.deployment_target = "5.0"
@@ -95,38 +95,39 @@ TODO: Add long description of the pod here.
   #
 
 #  spec.source_files  = 'GKit/CustomAlertManager/*.{h,m}'
-  spec.source_files  = 'StepOHelper/*.{h,m}'
+#spec.source_files  = 'StepOHelper/*.{h,m}'
+spec.source_files  = 'StepOHelper/**/*.{h,m}'
 #     s.source_files = 'SmartHome/Classes/**/*.{h,m,mm}'
 #  spec.source_files = 'Classes/**/*.{h,m}'
 #  spec.source_files = 'Classes/**/*.{h,m}', 'More_Classes/**/*.{h,m}'
 
 #  spec.exclude_files = 'GKit/'
 
-   spec.public_header_files = "StepOHelper/*.h"
-  
-  spec.subspec 'SOMacroDefine' do |macroDefine|
-    macroDefine.source_files = 'StepOHelper/SOMacroDefine/*.{h,m}'
-  end
- 
- spec.subspec 'SOUILabel' do |label|
-   label.source_files = 'StepOHelper/SOUILabel/*.{h,m}'
-   end
- 
- spec.subspec 'SOUIButton' do |button|
-   button.source_files = 'StepOHelper/SOUIButton/*.{h,m}'
-   end
- 
- spec.subspec 'NSString' do |string|
-   string.source_files = 'StepOHelper/SONSString/*.{h,m}'
- end
- 
- 
-  spec.subspec 'SOAlertView' do |alertView|
-    alertView.source_files = 'StepOHelper/SOAlertView/*.{h,m}'
-    alertView.subspec 'SOCustomerAlertView' do |customerAlertView|
-      customerAlertView.source_files = 'StepOHelper/SOAlertView/SOCustomerAlertView/*.{h,m}'
-    end
-  end
+#   spec.public_header_files = "StepOHelper/*.h"
+
+#  spec.subspec 'SOMacroDefine' do |macroDefine|
+#    macroDefine.source_files = 'StepOHelper/SOMacroDefine/*.{h,m}'
+#  end
+#
+# spec.subspec 'SOUILabel' do |label|
+#   label.source_files = 'StepOHelper/SOUILabel/*.{h,m}'
+#   end
+#
+# spec.subspec 'SOUIButton' do |button|
+#   button.source_files = 'StepOHelper/SOUIButton/*.{h,m}'
+#   end
+#
+# spec.subspec 'NSString' do |string|
+#   string.source_files = 'StepOHelper/SONSString/*.{h,m}'
+# end
+#
+#
+#  spec.subspec 'SOAlertView' do |alertView|
+#    alertView.source_files = 'StepOHelper/SOAlertView/*.{h,m}'
+#    alertView.subspec 'SOCustomerAlertView' do |customerAlertView|
+#      customerAlertView.source_files = 'StepOHelper/SOAlertView/SOCustomerAlertView/*.{h,m}'
+#    end
+#  end
 
   
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -149,6 +150,7 @@ TODO: Add long description of the pod here.
   #  the lib prefix of their name.
   #
 
+  spec.frameworks = "Foundation", "UIKit"
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
@@ -162,11 +164,12 @@ TODO: Add long description of the pod here.
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+   spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
- 
+  spec.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/*"'}
+
  spec.dependency 'Masonry'
  spec.dependency 'YYKit'
 

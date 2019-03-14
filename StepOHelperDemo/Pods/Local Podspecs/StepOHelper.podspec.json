@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    " 高昂": "gaoang@evergrande.cn"
+    " StepO": "gaogao323@126.com"
   },
   "platforms": {
     "ios": "9.0"
@@ -18,8 +18,15 @@
     "git": "git@github.com:nooto/StepOHelper.git",
     "tag": "0.0.1"
   },
-  "source_files": "StepOHelper/*.{h,m}",
-  "public_header_files": "StepOHelper/*.h",
+  "source_files": "StepOHelper/**/*.{h,m}",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "requires_arc": true,
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/*\""
+  },
   "dependencies": {
     "Masonry": [
 
@@ -27,33 +34,5 @@
     "YYKit": [
 
     ]
-  },
-  "subspecs": [
-    {
-      "name": "SOMacroDefine",
-      "source_files": "StepOHelper/SOMacroDefine/*.{h,m}"
-    },
-    {
-      "name": "SOUILabel",
-      "source_files": "StepOHelper/SOUILabel/*.{h,m}"
-    },
-    {
-      "name": "SOUIButton",
-      "source_files": "StepOHelper/SOUIButton/*.{h,m}"
-    },
-    {
-      "name": "NSString",
-      "source_files": "StepOHelper/SONSString/*.{h,m}"
-    },
-    {
-      "name": "SOAlertView",
-      "source_files": "StepOHelper/SOAlertView/*.{h,m}",
-      "subspecs": [
-        {
-          "name": "SOCustomerAlertView",
-          "source_files": "StepOHelper/SOAlertView/SOCustomerAlertView/*.{h,m}"
-        }
-      ]
-    }
-  ]
+  }
 }

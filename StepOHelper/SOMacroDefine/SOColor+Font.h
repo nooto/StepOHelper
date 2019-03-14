@@ -6,9 +6,9 @@
 //  Copyright © 2019年 Self.work. All rights reserved.
 //
 
-#ifndef SOColor_Font_h
-#define SOColor_Font_h
-#import "UIColor+YYAdd.h"
+//#ifndef SOColor_Font_h
+//#define SOColor_Font_h
+#import <YYKit/YYKit.h>
 // Color related macros
 #define UIColorFromHexValue(hexValue)       [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
 #define UIColorFromHexString(hexString)     [UIColor colorWithHexString:hexString]
@@ -38,4 +38,4 @@
 #define kLightGreyColor                     UIColorFromHexString(@"#DBDBDB")
 #define kHighlightGreyColor                 UIColorFromHexString(@"#EBEBEB")
 #define kDefaultYellowColor                 UIColorFromHexString(@"#FFD53D")
-#endif /* SOColor_Font_h */
+//#endif /* SOColor_Font_h */
