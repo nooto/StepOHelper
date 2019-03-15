@@ -9,19 +9,7 @@
 
 @interface SOCustomAlertView ()
 
-@property (nonatomic, strong) UILabel    *mTitleLabel;
 @property (nonatomic, strong) UILabel    *mMessageLabel;
-/**
- *  左侧按钮 属性
- */
-@property (nonatomic, strong) UIButton   *mLeftButton;
-
-/**
- *  右侧按钮 属性
- */
-@property (nonatomic, strong) UIButton   *mRightButton;
-
-
 @property (nonatomic, assign) CGFloat gapWidth;
 @property (nonatomic, assign) CGFloat  alpha;
 
@@ -134,6 +122,11 @@
     
 }
 
+- (void)show{
+    [self setupAlertView];
+    [super show];
+}
+
 
 #pragma mark -
 - (void)buttonAction:(UIButton*)sender{
@@ -146,15 +139,6 @@
 }
 
 #pragma mark -
-- (UILabel*)mTitleLabel{
-    if (!_mTitleLabel) {
-        //标题
-        _mTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.gapWidth), 44, CGRectGetWidth(self.mContentView.frame) -  (self.gapWidth)*2, 25)];
-        _mTitleLabel.font = kPingfangMediumFont(22);
-    }
-    return _mTitleLabel;
-}
-
 - (UILabel*)mMessageLabel{
     if (!_mMessageLabel) {
         //信息
@@ -165,36 +149,6 @@
     return _mMessageLabel;
 }
 
-- (UIButton*)mLeftButton{
-    if (!_mLeftButton) {
-        _mLeftButton = [[UIButton alloc] initWithFrame:CGRectMake(self.gapWidth, CGRectGetMaxY(self.mMessageLabel.frame) + 48, 0, 42)];
-        _mLeftButton.layer.borderColor = kLightGreyColor.CGColor;
-        _mLeftButton.titleLabel.font  =  kPingfangRegularFont(17);
-        [_mLeftButton setTitleColor:UIColorFromHexString(@"#212329") forState:UIControlStateNormal];
-        [_mLeftButton setBackgroundColor:UIColorFromHexString(@"#FFC700")];
-        _mLeftButton.layer.borderWidth = 0.5F;
-        _mLeftButton.layer.cornerRadius = 5.0f;
-        _mLeftButton.tag = 0;
-        [_mLeftButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _mLeftButton;
-}
-
-
-- (UIButton*)mRightButton{
-    if (!_mRightButton) {
-        _mRightButton = [[UIButton alloc] initWithFrame:CGRectMake(self.gapWidth, CGRectGetMaxY(self.mMessageLabel.frame) + 48, 0, 42)];
-        _mRightButton.layer.borderColor = kLightGreyColor.CGColor;
-        _mRightButton.titleLabel.font  =  kPingfangRegularFont(17);
-        [_mRightButton setTitleColor:UIColorFromHexString(@"#FFC700") forState:UIControlStateNormal];
-        [_mRightButton setBackgroundColor:[UIColor clearColor]];
-        //        _mRightButton.layer.borderWidth = 0.5F;
-        //        _mRightButton.layer.cornerRadius = 5.0f;
-        _mRightButton.tag = 1;
-        [_mRightButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _mRightButton;
-}
 
 @end
 

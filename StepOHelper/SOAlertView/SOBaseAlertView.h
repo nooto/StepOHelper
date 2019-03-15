@@ -37,6 +37,11 @@ typedef NS_ENUM(NSInteger, SOButtondirection) {
 
 //对 subclass 公开的view  用于自定义显示内容。
 @property (nonatomic, strong, readonly) UIView *mContentView;
+@property (nonatomic, strong, readonly) UILabel    *mTitleLabel;
+@property (nonatomic, strong, readonly) UIButton   *mLeftButton;
+@property (nonatomic, strong, readonly) UIButton   *mRightButton;
+
+
 
 /**
  *  动画效果  默认：SOAlertAnimate_FadeOut
