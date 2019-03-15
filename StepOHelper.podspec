@@ -83,7 +83,7 @@ TODO: Add long description of the pod here.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => 'git@github.com:nooto/StepOHelper.git', :tag => '0.0.1' }
+  spec.source       = { :git => 'git@github.com:nooto/StepOHelper.git', :tag => '0.0.2' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
