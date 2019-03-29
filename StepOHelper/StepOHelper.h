@@ -13,6 +13,8 @@
 #import "SOUIButton.h"
 #import "SOUILabel.h"
 #import "SOColor+Font.h"
+#import "SOUIView.h"
+#import "UIDevice+SO.h"
 
 
 //封装的控件。
