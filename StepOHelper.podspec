@@ -83,7 +83,7 @@ TODO: Add long description of the pod here.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => 'https://github.com/nooto/StepOHelper.git' }
+  spec.source       = { :git => 'https://github.com/nooto/StepOHelper.git', :tag=>'0.0.3' }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -95,38 +95,42 @@ TODO: Add long description of the pod here.
 
 #  spec.source_files  = 'GKit/CustomAlertManager/*.{h,m}'
 #spec.source_files  = 'StepOHelper/*.{h,m}'
-#spec.source_files  = 'StepOHelper/**/*.{h,m}'
+spec.source_files  = 'StepOHelper/**/*.{h,m}'
 #     s.source_files = 'SmartHome/Classes/**/*.{h,m,mm}'
 #  spec.source_files = 'Classes/**/*.{h,m}'
 #  spec.source_files = 'Classes/**/*.{h,m}', 'More_Classes/**/*.{h,m}'
 
 #  spec.exclude_files = 'GKit/'
 
-   spec.public_header_files = "StepOHelper/*.h"
+#   spec.public_header_files = "StepOHelper/*.h"
 
-  spec.subspec 'SOMacroDefine' do |macroDefine|
-    macroDefine.source_files = 'StepOHelper/SOMacroDefine/*.{h,m}'
-  end
-
- spec.subspec 'SOUILabel' do |label|
-   label.source_files = 'StepOHelper/SOUILabel/*.{h,m}'
-   end
-
- spec.subspec 'SOUIButton' do |button|
-   button.source_files = 'StepOHelper/SOUIButton/*.{h,m}'
-   end
-
- spec.subspec 'NSString' do |string|
-   string.source_files = 'StepOHelper/SONSString/*.{h,m}'
- end
-
-
-  spec.subspec 'SOAlertView' do |alertView|
-    alertView.source_files = 'StepOHelper/SOAlertView/*.{h,m}'
-    alertView.subspec 'SOCustomerAlertView' do |customerAlertView|
-      customerAlertView.source_files = 'StepOHelper/SOAlertView/SOCustomerAlertView/*.{h,m}'
-    end
-  end
+#  spec.subspec 'SOMacroDefine' do |macroDefine|
+#    macroDefine.source_files = 'StepOHelper/SOMacroDefine/*.{h,m}'
+#  end
+#
+# spec.subspec 'SOUILabel' do |label|
+#   label.source_files = 'StepOHelper/SOUILabel/*.{h,m}'
+#   end
+#
+# spec.subspec 'SOUIButton' do |button|
+#   button.source_files = 'StepOHelper/SOUIButton/*.{h,m}'
+#   end
+#
+# spec.subspec 'NSString' do |string|
+#   string.source_files = 'StepOHelper/SONSString/*.{h,m}'
+# end
+# 
+# spec.subspec 'SOCategory' do |category|
+#   category.source_files = 'StepOHelper/SOCategory/*.{h,m}'
+# end
+# 
+#
+#  spec.subspec 'SOAlertView' do |alertView|
+#    alertView.source_files = 'StepOHelper/SOAlertView/*.{h,m}'
+#    alertView.subspec 'SOCustomerAlertView' do |customerAlertView|
+#      customerAlertView.source_files = 'StepOHelper/SOAlertView/SOCustomerAlertView/*.{h,m}'
+#    end
+#  end
 
   
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
