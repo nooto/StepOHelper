@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "StepOHelper"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "A kit for wokre of StepOHelper"
 
   # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ TODO: Add long description of the pod here.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => 'https://github.com/nooto/StepOHelper.git', :tag=>'0.0.3' }
+  spec.source       = { :git => 'https://github.com/nooto/StepOHelper.git', :tag => spec.version }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
