@@ -98,7 +98,7 @@
 
 + (BOOL)isIPhoneX{
 #if TARGET_IPHONE_SIMULATOR
-    return [[UIScreen mainScreen] bounds].size.width == 375 && [[UIScreen mainScreen] bounds].size.height == 812;
+    return [[UIScreen mainScreen] bounds].size.width >= 375 && [[UIScreen mainScreen] bounds].size.height >= 812;
 #else
     UIDevicePlatform platform = [self platformType];
     return platform == UIDevicePlatformiPhoneX ||
