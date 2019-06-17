@@ -1,6 +1,6 @@
 PODS:
   - Masonry (1.1.0)
-  - StepOHelper (0.0.1):
+  - StepOHelper (0.0.3):
     - Masonry
     - YYKit
   - YYKit (1.0.9):
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  StepOHelper: 0630ebf72032d7ff35c6aa6740136ad53f3ea58f
+  StepOHelper: 824fd81f70caf8cf51d0db429760607806fc00bd
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 3442613b7e244e5727cf721b77b1d05239243ccd

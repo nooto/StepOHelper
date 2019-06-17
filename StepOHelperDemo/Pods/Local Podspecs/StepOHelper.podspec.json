@@ -1,6 +1,6 @@
 {
   "name": "StepOHelper",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "A kit for wokre of StepOHelper",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/nooto/StepOHelper",
@@ -15,8 +15,8 @@
     "ios": "9.0"
   },
   "source": {
-    "git": "git@github.com:nooto/StepOHelper.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/nooto/StepOHelper.git",
+    "tag": "0.0.3"
   },
   "source_files": "StepOHelper/**/*.{h,m}",
   "frameworks": [

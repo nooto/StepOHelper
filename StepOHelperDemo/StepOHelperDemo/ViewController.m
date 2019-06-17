@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import <StepOHelper/SOCustomAlertView.h>
 #import  <StepOHelper/SOCustomAlertManager.h>
+#import <StepOHelper/UIDevice+SO.h>
+#import <StepOHelper/SOTools.h>
+#import <StepOHelper/StepOHelper.h>
 @interface ViewController ()
-
+@property (nonatomic, strong) SONavigationView *mNavView;
 @end
 
 @implementation ViewController
@@ -24,6 +27,12 @@
     [SOAlertManagerShareInstance showAlertViewWithTitle:@"提示细腻的标题" message:@"细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻细腻" leftButton:@"细腻细腻细腻细腻细腻细腻细腻细腻" rightButton:@"细腻细腻细腻细腻细腻" completct:^(NSInteger selectIndex, NSString *title) {
         
     }];
+}
+-(SONavigationView*)mNavView{
+    if (!_mNavView) {
+        _mNavView = [[SONavigationView alloc] initWithdelegate:self];
+    }
+    return _mNavView;
 }
 
 @end
