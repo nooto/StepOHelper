@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "StepOHelper"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "A kit for wokre of StepOHelper"
 
   # This description is used to generate tags and improve search results.
